@@ -45,3 +45,45 @@ Die entsprechende Masse wurde an die Feder gehängt. Der BMW wurde in der Ruhela
 
 \section{Auswertung}
 \subsection{Bestimmung der Federhärten}
+Die gemessenen Ausdehnungen kann mit dem Hook'schen Gesetz die Federhärte bestimmt werden.
+
+\begin{align*}
+F &= D \cdot s \\
+D &= \frac{F}{s} \\
+  &= \frac{m \cdot g}{s} \\
+\end{align*}
+
+Trägt man die Messwerte in ein Masse-Auslenkungs-Diagramm ein und bestimmt die Steigung der Ausgleichsgeraden, erhält man:
+$$k = \frac{s}{m}$$
+
+Setzt man die Steigung in obige Gleichung ein, erhält man:
+\begin{align*}
+s &= k \cdot m \\
+D &= \frac{m \cdot g}{k \cdot m} \\
+  &= \frac{g}{k} \\
+\end{align*}
+
+\begin{figure}[H]
+\centering
+\begin{tabular}{lrrrr}
+\textbf{Feder} & \textbf{$k$ in \SI{}{\meter\per\kilo\gram}} & \textbf{Fehler $\Delta k$ in \SI{}{\meter\per\kilo\gram}} &\textbf{$D$ in \SI{}{\newton\per\meter}} & \textbf{Fehler $\Delta D$ in \SI{}{\newton\per\meter}} \\ \hline \\
+1 & \num{0.317} & \num{0.022} & \num{30.86} & \num{2.08}\\
+2 & \num{0.560} & \num{0.004} & \num{17.52} & \num{0.12}\\
+3 & \num{0.385} & \num{0.017} & \num{25.46} & \num{1.13}\\
+4 & \num{0.556} & \num{0.003} & \num{17.66} & \num{0.07}\\
+5 & \num{0.427} & \num{0.040} & \num{0.317} & \num{2.11}\\
+6 & \num{0.904} & \num{0.003} & \num{10.85} & \num{0.03}\\
+\end{tabular}
+\end{figure}
+
+Der Fehler der Steigung $\Delta k$ kann von GNUPlot ermittelt werden, indem der Fehler
+$$\Delta s = \pm \SI{5e-3}{\meter}$$
+angenommen wurde. Die Masse wurde als exakt angenommen.
+
+$D$ ist durch ein Produkt (Faktor $\frac{1}{g}$) von $k$ abhängig, daher ist der relative Fehler gleich. (Der Ortsfaktor wird als exakt angenommen).
+
+$$\Delta D = D \cdot \frac{\Delta k}{k}$$
+
+Für den Ortsfaktor wurde der Wert
+$$g = \SI{9.81}{\meter\per\square\second}$$
+angenommen.
