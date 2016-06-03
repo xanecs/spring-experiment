@@ -42,6 +42,21 @@ An die Feder wurden nach und nach Massestücke verschiedener Masse gehängt. Am 
 Die entsprechende Masse wurde an die Feder gehängt. Der BMW wurde in der Ruhelage des Feder-Masse-Systems auf Null gestellt. Dann wurde dass Massenstück nach unten ausgelenkt. Am CASSY konnte abgelesen werden, wie weit die Feder ausgelenkt wurde. Nachdem die gewünschte Auslenkung (und damit die Amplitude) eingestellt war, wurde die Feder losgelassen und möglichst schnell in CASSY die Aufzeichnung gestartet.
 
 \section{Messergebnisse}
+\subsection{Variieren der Masse}
+Gemessen wurde jeweils mit einer Startauslenkung von $s_0 = \SI{3e-2}{\meter}$.
+
+\begin{figure}[H]
+\centering
+\csvreader[tabular=rrrr, table head=Masse $m$ in \SI{}{\gram} & $\sqrt{m}$ & Periodendauer $T$ in \SI{}{\second} & Frequenz $f$ in \SI{}{\per\second} \\\hline]{data/spring1.csv}{}{\num{\csvcoli} & \num{\csvcolii} & \num{\csvcoliii} & \num{\csvcoliv}}
+\caption{Messwerte mit verschiedenen Massen an Feder 1, $D = \SI{30.86 \pm 2.08}{\newton\per\meter}$}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\csvreader[tabular=rrrr, table head=Masse $m$ in \SI{}{\gram} & $\sqrt{m}$ & Periodendauer $T$ in \SI{}{\second} & Frequenz $f$ in \SI{}{\per\second} \\\hline]{data/spring2.csv}{}{\num{\csvcoli} & \num{\csvcolii} & \num{\csvcoliii} & \num{\csvcoliv}}
+\caption{Messwerte mit verschiedenen Massen an Feder 2}
+\end{figure}
+
 
 \section{Auswertung}
 \subsection{Bestimmung der Federhärten}
@@ -66,7 +81,7 @@ D &= \frac{m \cdot g}{k \cdot m} \\
 \begin{figure}[H]
 \centering
 \begin{tabular}{lrrrr}
-\textbf{Feder} & \textbf{$k$ in \SI{}{\meter\per\kilo\gram}} & \textbf{Fehler $\Delta k$ in \SI{}{\meter\per\kilo\gram}} &\textbf{$D$ in \SI{}{\newton\per\meter}} & \textbf{Fehler $\Delta D$ in \SI{}{\newton\per\meter}} \\ \hline \\
+Feder & $k$ in \SI{}{\meter\per\kilo\gram} & Fehler $\Delta k$ in \SI{}{\meter\per\kilo\gram} & $D$ in \SI{}{\newton\per\meter} & Fehler $\Delta D$ in \SI{}{\newton\per\meter} \\ \hline
 1 & \num{0.317} & \num{0.022} & \num{30.86} & \num{2.08}\\
 2 & \num{0.560} & \num{0.004} & \num{17.52} & \num{0.12}\\
 3 & \num{0.385} & \num{0.017} & \num{25.46} & \num{1.13}\\
@@ -87,3 +102,25 @@ $$\Delta D = D \cdot \frac{\Delta k}{k}$$
 Für den Ortsfaktor wurde der Wert
 $$g = \SI{9.81}{\meter\per\square\second}$$
 angenommen.
+
+\subsection{Zusammenhang Periodendauer und Masse}
+Für die Periodendauer gilt
+$$T = 2\pi \frac{\sqrt{m}}{\sqrt{D}}$$
+Damit gilt $T \sim \sqrt{m}$ mit der Proportionalitätskonstante
+$$k = \frac{2\pi}{\sqrt{D}}$$
+
+Aus den Messwerten ergeben sich folgende Schaubilder:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{data/spring1.pdf}
+\caption{$\sqrt{m}$-$T$-Diagramm von Feder 1}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{data/spring2.pdf}
+\caption{$\sqrt{m}$-$T$-Diagramm von Feder 2}
+\end{figure}
+
+In den Schaubildern sieht sich der $T \sim \sqrt{m}$ - Zusammenhang bestätigt.
+GNUplot gibt für den Fehler der Steigung mit unter $1\%$ an.
