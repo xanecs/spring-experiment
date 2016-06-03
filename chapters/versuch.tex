@@ -123,4 +123,34 @@ Aus den Messwerten ergeben sich folgende Schaubilder:
 \end{figure}
 
 In den Schaubildern sieht sich der $T \sim \sqrt{m}$ - Zusammenhang bestätigt.
-GNUplot gibt für den Fehler der Steigung mit unter $1\%$ an.
+GNUplot gibt den Fehler der Steigung mit unter $1\%$ an.
+
+\subsection{Bestimmung der Federhärte aus dem funktionalen Zusammenhang}
+Die Steigung des Graphen ergibt
+$$k = \frac{T}{\sqrt{m}}$$
+
+Setzt man sie in die Gleichung
+$$T = 2\pi\sqrt{\frac{m}{D}}$$
+ein erhält man:
+
+\begin{align*}
+\sqrt{m} &= \frac{T}{k} \\
+T &= 2\pi\frac{T}{k \cdot \sqrt{D}} \\
+\sqrt{D} &= \frac{2\pi}{k} \\
+D &= \frac{4\pi^2}{k^2} \\
+\end{align*}
+
+Für den Fehler erhälkt man durch Ableiten der obigen Funktion für D:
+$$\Delta D = \frac{8\pi^2}{k^3}\cdot \Delta k$$
+
+\begin{figure}[H]
+\centering
+\begin{tabular}{r|rr|rr|rr}
+ & $k$ in $\SI{}{\second\sqrt{\kilo\gram}^{-1}}$ & $\Delta k$ in $\SI{}{\second\sqrt{\kilo\gram}^{-1}}$ & $D$ in \SI{}{\newton\per\meter} & $\Delta D$ in \SI{}{\newton\per\meter} & $D_{D}$ in \SI{}{\newton\per\meter} & $\Delta D_{D}$ in \SI{}{\newton\per\meter} \\\hline
+1 & \num{1.126} & \num{0.003} & \num{31.130} & \num{0.145} & \num{30.86} & \num{2.08} \\
+2 &  \num{1.433} & \num{0.004} & \num{19.214} & \num{0.097} & \num{17.52} & \num{0.12}
+\end{tabular}
+\caption{Ermittelte Werte für $D$, sowie Vergleich mit direkt gemessener Federhärte $D_D$}
+\end{figure}
+
+Die errechnete Steigung liegt bei Feder 1 im Bereich des Messfehlers, bei Feder 2, jedoch nicht. Eine Ursache dafür könnte ein in der Fehlerrechnung nicht berücksichtigter systematischer Fehler, oder ein Falsch abgeschätzter Messfehler sein.
