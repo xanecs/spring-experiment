@@ -51,6 +51,7 @@ Die entsprechende Masse wurde an die Feder gehängt. Der BMW wurde in der Ruhela
 \end{figure}
 
 \subsection{Variieren der Amplitude}
+\label{sub:change_amplitude}
 \begin{figure}[H]
 \centering
 \begin{tabular}{rrrr}
@@ -84,14 +85,23 @@ Gemessen wurde jeweils mit einer Startauslenkung von $s_0 = \SI{3e-2}{\meter}$.
 
 \begin{figure}[H]
 \centering
-\csvreader[tabular=rrrr, table head=Masse $m$ in \SI{}{\gram} & $\sqrt{m}$ & Periodendauer $T$ in \SI{}{\second} & Frequenz $f$ in \SI{}{\per\second} \\\hline]{data/spring1.csv}{}{\num{\csvcoli} & \num{\csvcolii} & \num{\csvcoliii} & \num{\csvcoliv}}
+\csvreader[tabular=rrrr, table head=Masse $m$ in \SI{}{\gram} & $\sqrt{m}$ & Periodendauer $T$ in \SI{}{\second} & Frequenz $f$ in \SI{}{\hertz} \\\hline]{data/spring1.csv}{}{\num{\csvcoli} & \num{\csvcolii} & \num{\csvcoliii} & \num{\csvcoliv}}
 \caption{Messwerte mit verschiedenen Massen an Feder 1, $D = \SI{30.86 \pm 2.08}{\newton\per\meter}$}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\csvreader[tabular=rrrr, table head=Masse $m$ in \SI{}{\gram} & $\sqrt{m}$ & Periodendauer $T$ in \SI{}{\second} & Frequenz $f$ in \SI{}{\per\second} \\\hline]{data/spring2.csv}{}{\num{\csvcoli} & \num{\csvcolii} & \num{\csvcoliii} & \num{\csvcoliv}}
+\csvreader[tabular=rrrr, table head=Masse $m$ in \SI{}{\gram} & $\sqrt{m}$ & Periodendauer $T$ in \SI{}{\second} & Frequenz $f$ in \SI{}{\hertz} \\\hline]{data/spring2.csv}{}{\num{\csvcoli} & \num{\csvcolii} & \num{\csvcoliii} & \num{\csvcoliv}}
 \caption{Messwerte mit verschiedenen Massen an Feder 2, $D = \SI{17.52 \pm 0.12}{\newton\per\meter}$}
+\end{figure}
+
+\subsection{Variieren der Federhärte}
+\label{sub:change_hardness}
+
+\begin{figure}[H]
+\centering
+\csvreader[tabular=rrrrrr, table head=Feder & Federhärte $D$ in \SI{}{\newton\per\meter} & $\Delta D$ in \SI{}{\newton\per\meter} & Periodendauer $T$ in \SI{}{\second} & Frequenz $f$ in \SI{}{\hertz} \\\hline]{data/change_hardness.csv}{}{\csvcoli & \num{\csvcolii} & \num{\csvcoliii} & \num{\csvcoliv} & \num{\csvcolv}}
+\caption{Messwerte mit verschiedenen Federn bei gleicher Masse $m = \SI{200}{\gram}$}
 \end{figure}
 
 
@@ -144,6 +154,9 @@ $$\Delta D = D \cdot \frac{\Delta k}{k}$$
 Für den Ortsfaktor wurde der Wert
 $$g = \SI{9.81}{\meter\per\square\second}$$
 angenommen.
+
+\subsection{Zusammenhang Amplitude und Masse}
+Aus den Messwerten in \ref{sub:change_amplitude} kann man sehen, dass die Periodendauern bei den Messwertgruppen, bei denen alle Faktoren, außer der Amplitude gleich sind, nahezu identisch sind. Die Amplitude, oder Startauslenkung, hat keinen Einfluss auf die Periodendauer.
 
 \subsection{Zusammenhang Periodendauer und Masse}
 Für die Periodendauer gilt
