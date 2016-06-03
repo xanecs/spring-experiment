@@ -1,0 +1,10 @@
+\chapter{Fehlerbetrachtung}
+\section{Messmethode BMW}
+Durch die Aufhängung mit dem BMW war die Schwingung nicht mehr wirklich „frei”. Das bedeutet, dass die Schwingung durch die Reibung am BMW, und durch das Gegenwicht gedämpft wird. Dies hat jedoch keine Auswirkung auf die Periodendauer, bei der es um der Messung ging. Außerdem kann es passieren, dass der Faden auf dem BMW „durchrutscht“, dass sich das Pendel also bewegt, sich das Rad des BMW aber nicht dreht.
+
+\section{Federn}
+Für den Versuch ist es natürlich wichtig, dass nur Federn verwendet werden, für die das Hook'sche Gesetz gilt. Für manche Federn gilt das Hook'sche Gesetz auch nur in einem bestimmtem Bereich. Da dieser Bereich bei den Federn nicht angegeben war, kann es sein, dass ein Teil der Messungen außerhalb dieses Bereichs liegt. Diese Messungen wären dann fehlerhaft.
+
+\section{Schwingende Masse}
+Die Vereinfachung, die schwingende Masse zu vernachlässigen ist problematisch.
+Denn in Wirklichkeit erfährt die Feder natürlich auch eine Gewichtskraft, die einen Einfluss auf die Rückstellkraft hat.

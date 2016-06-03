@@ -4,7 +4,7 @@ Beim Versuch wurden Federn mit verschiedenen Federhärten mit verschiedenen Mass
 
 Von den verschiedenen Federn wurde jeweils durch Messen der Auslenkung, die durch Massestücke verschiedener Masse hervorgerufen wird, die Federhärte bestimmt.
 
-Anhand der Messswerte wurde
+Anhand der Messwerte wurde
 \begin{itemize}
     \item der Einfluss der Amplitude auf die Periodendauer
     \item der Zusammenhang $T \sim \sqrt{m}$
@@ -25,21 +25,48 @@ Zu den Ergebnissen wurde jeweils eine Fehlerbetrachtung angestellt.
     \item Faden und leichtes Gegengewicht
     \item Maßstab
 \end{itemize}
+\begin{figure}[H]
+\centering
+\subfloat[Feder 1\label{fig:Feder1}]{\includegraphics[height=0.4\textheight]{img/Feder1.jpg}}
+\qquad
+\subfloat[Feder 2\label{fig:Feder1}]{\includegraphics[height=0.4\textheight]{img/Feder2.jpg}}
+\qquad
+\subfloat[Feder 3\label{fig:Feder1}]{\includegraphics[height=0.4\textheight]{img/Feder3.jpg}}
+\qquad
+\subfloat[Feder 4\label{fig:Feder1}]{\includegraphics[height=0.4\textheight]{img/Feder4.jpg}}
+\qquad
+\subfloat[Feder 5\label{fig:Feder1}]{\includegraphics[height=0.4\textheight]{img/Feder5.jpg}}
+\qquad
+\subfloat[Feder 6\label{fig:Feder1}]{\includegraphics[height=0.4\textheight]{img/Feder6.jpg}}
+\qquad
+\caption{Federn}
+\label{fig:Federn}
+\end{figure}
 
 \section{Aufbau}
 Zunächst wurde mit dem Stativmaterial eine geeignete Befestigung für die Federn aufgebaut. Die Feder hängt oben an einem Haken, unten wird sie nicht befestigt, so dass sie frei schwingen kann. Neben der Feder wird der Bewegungs-Messwandler (BMW) angebracht. Das leichte Gegengewicht wurde an den Faden gebunden, dieser wurde über den BMW gelegt und sein anderes Ende an die Unterseite der Feder gebunden. Ebenfalls an die untere Seite der Feder wurde das Massestück angehängt.
 Der BMW wird an das CASSY gesteckt, dieses wird an den Laptop angeschlossen.
 
-Zur Messung der Federhärte wurde ebenfalls ein Stativ mit Haken aufgebaut, an den die Oberseite der Feder gehängt wurde, an die Unterseite wurden verschiedene Massestücke gehängt. Neben der Feder wurde ein Maßtab befestingt, um die Auslenkung der Feder ablesen zu können.
+Zur Messung der Federhärte wurde ebenfalls ein Stativ mit Haken aufgebaut, an den die Oberseite der Feder gehängt wurde, an die Unterseite wurden verschiedene Massestücke gehängt. Neben der Feder wurde ein Maßstab befestigt, um die Auslenkung der Feder ablesen zu können.
 
-%TODO: Add images
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{img/Aufbau.png}
+\caption{Versuchsanordnung}
+\end{figure}
 
 \section{Durchführung}
 \subsection{Bestimmung der Federhärte}
 An die Feder wurden nach und nach Massestücke verschiedener Masse gehängt. Am Maßstab wurde jeweils die Auslenkung, also die Strecke, um die sich die Feder verlängert, wenn das Gewicht angehängt wurde, abgelesen und zusammen mit der Masse notiert.
 
 \subsection{Aufzeichnen der Schwingung}
-Die entsprechende Masse wurde an die Feder gehängt. Der BMW wurde in der Ruhelage des Feder-Masse-Systems auf Null gestellt. Dann wurde dass Massenstück nach unten ausgelenkt. Am CASSY konnte abgelesen werden, wie weit die Feder ausgelenkt wurde. Nachdem die gewünschte Auslenkung (und damit die Amplitude) eingestellt war, wurde die Feder losgelassen und möglichst schnell in CASSY die Aufzeichnung gestartet.
+Die entsprechende Masse wurde an die Feder gehängt. Der BMW wurde in der Ruhelage des Feder-Masse-Systems auf Null gestellt. Dann wurde dass Massestück nach unten ausgelenkt. Am CASSY konnte abgelesen werden, wie weit die Feder ausgelenkt wurde. Nachdem die gewünschte Auslenkung (und damit die Amplitude) eingestellt war, wurde die Feder losgelassen und möglichst schnell in CASSY die Aufzeichnung gestartet. Anhand der aufgezeichneten Daten konnte später die Periodendauer durch abzählen mehrerer Perioden einfach und in Ruhe erfolgen.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{img/chartsel.png}
+\caption{Grafische Darstellung einer CASSY-Aufzeichnung}
+\end{figure}
 
 \section{Messergebnisse}
 \subsection{Federhärtebestimmung}
@@ -195,7 +222,7 @@ T &= 2\pi\frac{T}{k \cdot \sqrt{D}} \\
 D &= \frac{4\pi^2}{k^2} \\
 \end{align*}
 
-Für den Fehler erhälkt man durch Ableiten der obigen Funktion für D:
+Für den Fehler erhält man durch Ableiten der obigen Funktion für D:
 $$\Delta D = \frac{8\pi^2}{k^3}\cdot \Delta k$$
 
 \begin{figure}[H]
@@ -243,4 +270,4 @@ $$\Delta m = \frac{k}{2\pi^2}\Delta k$$
 Die errechnete Masse beträgt:
 $$m = \SI{225 \pm 6e-3}{\kilo\gram}$$
 
-Diese Masse ist größer als die Masse des Massestücks alleine, da hier noch die Masse der Feder berücksichtigt wird.
+Diese Masse ist größer als die Masse des Massestücks alleine (\SI{200}{\gram}), da hier noch die Masse der Feder berücksichtigt wird.
